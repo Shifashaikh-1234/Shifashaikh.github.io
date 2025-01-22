@@ -3,23 +3,28 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
+    width: 100%;
 }
 
 .nav-menu{
     display: flex;
+    background-color: #000000;
 }
 
 .nav-menu li{
     padding: 0 1rem;
+    
 
 }
 .nav-menu li a{
     font-size: 1.2rem;
     font-weight: 500;
+    color: white;
 }
 
 .hamburger{
     display: none;
+    color: white;
 }
 
 @media screen and (max-width: 1040px) {
