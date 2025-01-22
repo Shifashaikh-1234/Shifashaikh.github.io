@@ -35,9 +35,9 @@ const Navbar = () => {
   }
   return (
     <div className="header">
-      <link to="/">
+      <Link to="/">
       <h1>Shifa Tazeen</h1>
-      </link>
+      </Link>
       <ul className={toggleIcon ? "nav-menu active" : "nav-menu"}>
       {data.map((item, key) => (
             <li key={key}>
