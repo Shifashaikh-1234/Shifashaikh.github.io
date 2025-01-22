@@ -32,35 +32,30 @@ const Navbar = () => {
 
   const handleToggleIcon = () => {
     setToggleIcon(!toggleIcon);
-  };
+  }
   return (
-    <div>
-      <nav className="navbar">
-        <div className="navbar__container">
-          <Link to={"/"} className="navbar__container__logo">
-            <p>SHIFA TAZEEN</p>
-          </Link>
-        </div>
-        <ul
-          className={`navbar__container__menu ${toggleIcon ? "active" : ""} `}
-        >
-          {data.map((item, key) => (
-            <li key={key} className="navbar__container__menu__item">
-              <Link
-                className="navbar__container__menu__item__links"
-                to={item.to}
-              >
+    <div className="header">
+      <link to="/">
+      <h1>Shifa Tazeen</h1>
+      </link>
+      <ul className={toggleIcon ? "nav-menu active" : "nav-menu"}>
+      {data.map((item, key) => (
+            <li key={key}>
+              <Link to={item.to}>
                 {item.label}
               </Link>
             </li>
           ))}
-        </ul>
-        <div className="nav-icon" onClick={handleToggleIcon}>
-          {toggleIcon ? <HiX size={30} /> : <FaBars size={30} />}
-        </div>
-      </nav>
+      </ul>
+    <div className="hamburger" onClick={handleToggleIcon}>
+      {toggleIcon? <FaBars size={24}/> : <HiX size={24}/> }
+      
+
     </div>
+    </div>
+
   );
 };
 
 export default Navbar;
+
